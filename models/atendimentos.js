@@ -79,7 +79,7 @@ class Atendimento{
     alterar(id, valores, res){
         if(valores.data){
             
-            valores.data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH-MM-SS')
+            valores.data = moment(valores.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH-MM-SS')
         
         }
 

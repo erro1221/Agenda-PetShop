@@ -11,7 +11,7 @@ app.get('/atendimento/:id', (req, res) => {
 
 
     Atendimento.buscaPorId(id, res)
-    res.send('Ok')
+    
 }) 
 
 app.patch('/atendimentos/:id',(req, res) =>{
@@ -19,13 +19,13 @@ app.patch('/atendimentos/:id',(req, res) =>{
     const id = parseInt(req.params.id)
     const valores = req.body
 
-    Atendimento.altera(id, valores, res)
+    Atendimento.alterar(id, valores, res)
 
 })
 
 app.delete('/atendimentos/:id', (req, res)  => {
 
-    const id = parserInt(req.params.id)
+    const id = parseInt(req.params.id)
    
     Atendimento.deletar(id, res)
 
